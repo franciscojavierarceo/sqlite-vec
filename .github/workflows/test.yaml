@@ -8,6 +8,7 @@ permissions:
   contents: read
 jobs:
   build-linux-x86_64-extension:
+    name: "Build on Linux"
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
@@ -22,6 +23,7 @@ jobs:
           name: sqlite-vec-linux-x86_64-extension
           path: dist/*
   build-macos-x86_64-extension:
+    name: "Build MacOS x86"
     runs-on: macos-12
     steps:
       - uses: actions/checkout@v4
@@ -33,6 +35,7 @@ jobs:
           name: sqlite-vec-macos-x86_64-extension
           path: dist/*
   build-macos-aarch64-extension:
+    name: "Build MacOS arch64"
     runs-on: macos-14
     steps:
       - uses: actions/checkout@v4
@@ -44,6 +47,7 @@ jobs:
           name: sqlite-vec-macos-aarch64-extension
           path: dist/*
   build-windows-x86_64-extension:
+    name: "Build Windows 2019"
     runs-on: windows-2019
     steps:
       - uses: actions/checkout@v4
@@ -59,6 +63,7 @@ jobs:
           name: sqlite-vec-windows-x86_64-extension
           path: dist/*
   build-windows-x86_64-extension-msvc:
+    name: "Build Windows x86"
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
